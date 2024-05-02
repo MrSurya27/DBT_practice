@@ -1,4 +1,4 @@
-{{ config(materialized='view') }}
+{{ config(materialized='table') }}
 
 with new_tt as (
     select BeneId,InscClaimAmtReimbursed,DeductibleAmtPaid,(InscClaimAmtReimbursed+DeductibleAmtPaid) AS Total
